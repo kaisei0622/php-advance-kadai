@@ -41,8 +41,8 @@ if (isset($_POST['submit'])) {
 try {
 	$pdo = new PDO($dsn, $user, $password);
 
-	// genresテーブルからgenres_codeカラムのデータを取得するためのSQL文を変数$sql_selectに代入する
-	$sql_select = 'SELECT genres_code FROM genres';
+	// genresテーブルからgenre_codeカラムのデータを取得するためのSQL文を変数$sql_selectに代入する
+	$sql_select = 'SELECT genre_code FROM genres';
 
 	// SQL文を実行する
 	$stmt_select = $pdo->query($sql_select);
@@ -96,7 +96,7 @@ try {
 					<label for="stock_quantity">在庫数</label>
 					<input type="number" name="stock_quantity" min="0" max="100000000" required>
 
-					<label for="genres_code">ジャンルコード</label>
+					<label for="genre_code">ジャンルコード</label>
 					<select name="genre_code" required>
 						<option disabled selected value>選択してください</option>
 						<?php

@@ -68,8 +68,8 @@ if (isset($_GET['id'])) {
 			exit('idパラメータの値が不正です。');
 		}
 
-		// genresテーブルからgenres_codeカラムのデータを取得するためのSQL文を変数$sql_select_genre_codesに代入する
-		$sql_select_genre_codes = 'SELECT genres_code FROM genres';
+		// genresテーブルからgenre_codeカラムのデータを取得するためのSQL文を変数$sql_select_genre_codesに代入する
+		$sql_select_genre_codes = 'SELECT genre_code FROM genres';
 
 		// SQL文を実行する
 		$stmt_select_genre_codes = $pdo->query($sql_select_genre_codes);
